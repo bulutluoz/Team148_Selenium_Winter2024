@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 
 public class C02_Locators {
@@ -46,6 +47,21 @@ public class C02_Locators {
 
 
         //5- Islem basliklari icinde “Pay Bills” oldugunu test edin
+
+        List<String> baslikListesiStr = new ArrayList<>();
+
+        for (WebElement eachBaslik:baslikElementleriList){
+
+            baslikListesiStr.add(eachBaslik.getText());
+        }
+
+        // [Account Summary, Account Activity, Transfer Funds, Pay Bills, My Money Map, Online Statements]
+
+        String expectedBaslikIsmi = "Pay Bills";
+
+        if (baslikListesiStr.contains(expectedBaslikIsmi)){
+            System.out.println("Pay Bills testi PASSED");
+        } else System.out.println("Pay Bills testi FAILED");
 
 
         //6- Sayfayi kapatin
