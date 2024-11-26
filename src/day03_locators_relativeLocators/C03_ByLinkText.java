@@ -22,6 +22,16 @@ public class C03_ByLinkText {
         //2- https://www.automationexercise.com/ adresine gidin
         driver.get("https://www.automationexercise.com/");
         Thread.sleep(3000);
+
+
+        // cikan cookies kabul edin
+
+        driver.findElement(By.xpath("(//p[@class='fc-button-label'])[1]"))
+                .click();
+
+        Thread.sleep(3000);
+
+
         //3- Sayfada 147 adet link bulundugunu test edin.
 
         List<WebElement> linkElementleriList = driver.findElements(By.tagName("a"));
