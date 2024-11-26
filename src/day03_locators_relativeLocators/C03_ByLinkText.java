@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.time.Duration;
 import java.util.List;
@@ -14,7 +15,7 @@ public class C03_ByLinkText {
 
         //1- Bir test class’i olusturun ilgili ayarlari yapin
         System.setProperty("Webdriver.chrome.driver","kurulumDosyalari/chromedriver");
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new FirefoxDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
